@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>FilmInfo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="assets/materialize/css/materialize.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <script src="assets/materialize/js/materialize.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/login.js"></script>
+    </head>
+    <body onload="check_login()">
+        <header>
+            <nav class="blue lighten-1">
+                <div class="nav-wrapper">
+                    <ul class="left">
+                        <li><a href=""><i class="material-icons">home</i></a></li>
+                        <li><a onclick="showFavoritos()" ><i class="material-icons">favorite</i></a></li>
+                        <li>
+                            <div class="input-field">
+                                <input id="input-search" type="text" placeholder="Busca una pelicula">
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="right">
+                        <li id="nombre-usuario" style="margin-right: 10px;"></li>
+                        <li><a onclick="logout();" ><i class="material-icons">power_settings_new</i></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div id="container">
+
+            <div id="films" class="row center-align">
+                <i class="material-icons index-arrow large">file_upload</i>
+                <br>
+                <h2 class="index-text">Empieza a buscar series y peliculas</h2>
+            </div>
+
+            <div id="not-found" class="center-align hide">
+                No se han encontrado resultados.
+            </div>
+
+            <div id="favoritos" class="row center-align hide"></div>
+
+            <div id="film-info" class="row hide" data-film-id="">
+                <div id="left-box" class="col s12 m4 l3 center-align">
+                    <img id="img-ficha" class="center-align" src="">
+                    <table id="table-info" data-film-id="">
+                        <tbody>
+                            <tr>
+                                <td>Año:</td>
+                                <td id="año"></td>
+                            </tr>
+                            <tr>
+                                <td>Pais:</td>
+                                <td id="pais"></td>
+                            </tr>
+                            <tr>
+                                <td>Lenguaje:</td>
+                                <td id="lenguaje"></td>
+                            </tr>
+                            <tr>
+                                <td>Duraciñon:</td>
+                                <td id="duracion"></td>
+                            </tr>
+                            <tr>
+                                <td>Valoración:</td>
+                                <td id="rated"></td>
+                            </tr>
+                            <tr>
+                                <td>Publicado:</td>
+                                <td id="relased"></td>
+                            </tr>
+                            <tr>
+                                <td>Genero:</td>
+                                <td id="genero"></td>
+                            </tr>
+                            <tr>
+                                <td>Director:</td>
+                                <td id="director"></td>
+                            </tr>
+                            <tr>
+                                <td>Escritor:</td>
+                                <td id="escritor"></td>
+                            </tr>
+                            <tr>
+                                <td>Actores:</td>
+                                <td id="actores"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="right-box" class="col s12 m8 l9">
+                    <h2 id="title"></h2>
+                    <br>
+                    <p id="descripcion"></p>
+                </div>
+                <div class="fixed-action-btn">
+                    <a onclick="addFavorite()" class="btn-floating btn-large red"><i id="favoritos-icon" class="material-icons"></i></a>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.getElementById('input-search').addEventListener("keyup", search);
+        </script>
+    </body>
+</html>

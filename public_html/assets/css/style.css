@@ -1,0 +1,99 @@
+*{
+    font-family: Verdana;
+}
+
+#input-search {
+    border-radius: 5px;
+    color: #42a5f5;
+    height: 35px;
+    background-color: white;
+    padding-left: 5px;
+    width: 400px;
+    margin-left: 20px;
+}
+
+.index-arrow{
+    margin-top: 50px;
+    color: #64b5f6;
+}
+
+.index-text{
+    color: #64b5f6;
+}
+
+.card{
+    cursor: pointer;
+}
+.card-image-image {
+    height: 375px;
+}
+.card-content {
+    height: 100px;
+}
+
+.card-action{
+    height: 70px;
+}
+
+#film-info {
+    height: 100%;  
+}
+#left-box{
+    border-right: 2px solid gray;
+    padding: 15px;
+}
+#right-box{
+    padding-left: 30px;
+}
+
+#img-ficha {
+    max-width: 300px;
+    width: 90%;
+    border: 3px solid #64b5f6;
+    border-radius: 10px;
+}
+
+#table-info {
+    border: 0;
+}
+
+#not-found{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: lightcoral;
+    margin: 40px 40px;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+body {
+    background: #fff;
+}
+
+.input-field input[type=date]:focus + label,
+.input-field input[type=text]:focus + label,
+.input-field input[type=email]:focus + label,
+.input-field input[type=password]:focus + label {
+    color: #1e88e5!important;
+}
+
+.input-field input[type=date]:focus,
+.input-field input[type=text]:focus,
+.input-field input[type=email]:focus,
+.input-field input[type=password]:focus {
+    border-bottom: 2px solid #1e88e5!important;
+    box-shadow: none!important;
+}
+
+.container-login {
+    margin-top: 100px;
+}
